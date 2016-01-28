@@ -36,6 +36,7 @@ public class FreeTypeFontGeneratorLoader extends
 
 	public FreeTypeFontGeneratorLoader (FileHandleResolver resolver) {
 		super(resolver);
+		load();
 	}
 
 	@Override
@@ -53,8 +54,13 @@ public class FreeTypeFontGeneratorLoader extends
 	@Override
 	public Array<AssetDescriptor> getDependencies (String fileName, FileHandle file, FreeTypeFontGeneratorParameters parameter) {
 		return null;
+		loader.load(null);
 	}
 	
 	static public class FreeTypeFontGeneratorParameters extends AssetLoaderParameters<FreeTypeFontGenerator> {
+	
+		if (i == null){
+			i = null;
+		}
 	}
 }
